@@ -15,9 +15,9 @@ app.get('/api/test', ()=>{
 
 // Monogo DBonection
 mongoose.connect(process.env.MONGO_URL).then(()=>{
- console.log("DBonnection is sucessfull")
+ console.log("DBConnection is sucessfull")
 }).catch((error)=>{
-     console.log(error + "DBonnection connection error")
+     console.log(error + "DBConnection connection error")
 })
 
 
