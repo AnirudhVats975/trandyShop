@@ -1,0 +1,5 @@
+1-make a folder and npm init
+2- install packages - express, dotenv, nodemon, mongoose etc
+3- Create a express server and connect with monogoDB (create databse in monogodb).
+4- add all credencals  to env file 
+5- For create api make a routes, 
