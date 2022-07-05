@@ -3,19 +3,20 @@ const app = express();
 const mongoose = require("mongoose");
 const dotenv = require('dotenv');
 dotenv.config();
+const userRoute = require("./routes/user");
+const { json } = require("express");
 
 
 
 // Routes
-app.get('/api/test', ()=>{
-     console.log("api text is sucessfull")
-})
+app.use(express.json());
+app.use("/api/users", userRoute )
 
 
 
-// Monogo DBonection
+// mongoose DBConnection
 mongoose.connect(process.env.MONGO_URL).then(()=>{
- console.log("DBConnection is sucessfull")
+ console.log("DBConnection is successFull")
 }).catch((error)=>{
      console.log(error + "DBConnection connection error")
 })
